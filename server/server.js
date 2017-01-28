@@ -134,7 +134,7 @@ app.get('/users/me', authenticate, (req, res) => {
 	var token = req.header('x-auth');
 
 	User.findByToken(token).then((user) => {
-		res.send(req.user);
+		res.send(req.user);		
 	});
 });
 
